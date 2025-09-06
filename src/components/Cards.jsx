@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import { Context } from "../store/appContext.jsx";
 
 export const Card = ({ item }) => {
     const { actions, store } = useContext(Context);

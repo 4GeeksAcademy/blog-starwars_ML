@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
-import { Context } from '../store/appContext';
+import { Context } from '../store/appContext.jsx';
 import { useNavigate } from 'react-router-dom';
 
 export const Search = () => {

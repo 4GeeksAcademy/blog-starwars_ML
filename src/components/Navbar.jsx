@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
-import { Search } from "./Search";
+import { Context } from "../store/appContext.jsx";
+import { Search } from "./Search.jsx";
 
 export const Navbar = () => {
     const { store, actions } = useContext(Context);

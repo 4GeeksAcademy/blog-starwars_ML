@@ -1,31 +1,16 @@
-import React, { useContext } from "react";
-import { Card } from "//components/Card";
-import "//styles/home.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-	const { store } = useContext(Context);
-
 	return (
-		<div className="container mt-5">
-			<h1 className="text-warning mb-4">Characters</h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto pb-3">
-				{store.people.map((person) => (
-					<Card key={person.uid} item={person} />
-				))}
-			</div>
-
-			<h1 className="text-warning mt-5 mb-4">Planets</h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto pb-3">
-				{store.planets.map((planet) => (
-					<Card key={planet.uid} item={planet} />
-				))}
-			</div>
-
-			<h1 className="text-warning mt-5 mb-4">Vehicles</h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto pb-3">
-				{store.vehicles.map((vehicle) => (
-					<Card key={vehicle.uid} item={vehicle} />
-				))}
+		<div className="container text-center mt-5">
+			<h1 className="display-3 mb-4 text-warning">Bienvenido al Blog de Star Wars</h1>
+			<p className="lead mb-5">Explora personajes, planetas y vehículos del universo Star Wars. Haz clic abajo para comenzar la aventura.</p>
+			<Link to="/demo">
+				<button className="btn btn-lg btn-primary">Ir al Blog Interactivo</button>
+			</Link>
+			<div className="mt-5">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars Logo" style={{maxWidth: '300px'}} />
 			</div>
 		</div>
 	);
